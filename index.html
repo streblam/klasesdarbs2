@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hamlet, Act III, Scene I — To be, or not to be by William Shakespeare" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hamlet, Act III, Scene I — To be, or not to be by William Shakespeare">
   <title>Hamlet — To be, or not to be</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="top-progress" aria-hidden="true">
+    <span id="topProgressBar"></span>
+  </div>
 
   <header class="hero">
-    <nav class="nav container" aria-label="Primary navigation">
-      <a class="brand" href="#">THE VERSE</a>
-      <a class="nav-link" href="#poem">Read poem</a>
+    <nav class="nav container">
+      <a href="#" class="brand">THE VERSE</a>
+      <a href="#poem" class="nav-link">Read poem</a>
     </nav>
 
     <div class="hero-content container">
-      <p class="eyebrow">William Shakespeare · Hamlet · Act III, Scene I</p>
-      <h1>To be, or not to be</h1>
-      <p class="intro">
-        One of Shakespeare’s most famous soliloquies — a meditation on life,
-        death, suffering, fear, and the weight of human thought.
-      </p>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">William Shakespeare · Hamlet · Act III, Scene I</p>
 
-      <div class="author-card">
-        <div class="author-mark" aria-hidden="true">WS</div>
-        <div>
-          <p class="author-name">William Shakespeare</p>
-          <p class="author-years">1564 — 1616</p>
+        <h1>To be,<br>or not to be</h1>
+
+        <p class="intro">
+          One of Shakespeare’s most famous soliloquies — a meditation on life,
+          death, suffering, fear, and the weight of human thought.
+        </p>
+
+        <div class="author-card">
+          <div class="author-mark">WS</div>
+          <div>
+            <p class="author-name">William Shakespeare</p>
+            <p class="author-years">1564 — 1616</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-art reveal" aria-hidden="true">
+        <div class="portrait-ring">
+          <div class="portrait-monogram">WS</div>
+          <div class="portrait-line"></div>
+          <div class="portrait-years">1564 · 1616</div>
         </div>
       </div>
     </div>
@@ -36,41 +52,31 @@
   </header>
 
   <main id="poem" class="page container">
-    <aside class="actions" aria-label="Poem actions">
+    <aside class="actions reveal" aria-label="Poem actions">
       <p class="actions-title">Share</p>
 
-      <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" rel="noopener">
+      <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" rel="noopener noreferrer">
         <span class="action-icon">f</span>
         <span>Facebook</span>
       </a>
 
-      <a href="https://twitter.com/intent/tweet" target="_blank" rel="noopener">
+      <a href="https://twitter.com/intent/tweet" target="_blank" rel="noopener noreferrer">
         <span class="action-icon">𝕏</span>
         <span>Twitter</span>
       </a>
 
-      <a href="https://www.tumblr.com/widgets/share/tool" target="_blank" rel="noopener">
+      <a href="https://www.tumblr.com/widgets/share/tool" target="_blank" rel="noopener noreferrer">
         <span class="action-icon">t</span>
         <span>Tumblr</span>
       </a>
 
-      <a href="#" onclick="window.print(); return false;">
+      <button type="button" id="printButton" class="action-button">
         <span class="action-icon">⎙</span>
-        <span>Print mode</span>
-      </a>
-
-      <a href="#embed">
-        <span class="action-icon">&lt;/&gt;</span>
-        <span>Embed code</span>
-      </a>
-
-      <a href="#anthology">
-        <span class="action-icon">＋</span>
-        <span>Add to anthology</span>
-      </a>
+        <span>Print</span>
+      </button>
     </aside>
 
-    <article class="poem-card">
+    <article class="poem-card reveal">
       <header class="poem-heading">
         <p class="kicker">Hamlet, Act III, Scene I</p>
         <h2>To be, or not to be</h2>
@@ -124,26 +130,26 @@
     </article>
   </main>
 
-  <section id="embed" class="extra container">
-    <div class="extra-card">
-      <p class="extra-label">Embed</p>
-      <h3>Copy embed code</h3>
-      <code>&lt;blockquote&gt;To be, or not to be... — William Shakespeare&lt;/blockquote&gt;</code>
+  <div class="reading-progress" id="readingProgress" aria-label="Reading progress">
+    <svg viewBox="0 0 64 64" class="progress-ring" aria-hidden="true">
+      <circle class="progress-track" cx="32" cy="32" r="27"></circle>
+      <circle class="progress-value" cx="32" cy="32" r="27"></circle>
+    </svg>
+
+    <div class="progress-number">
+      <span id="progressPercent">0</span><small>%</small>
     </div>
 
-    <div id="anthology" class="extra-card">
-      <p class="extra-label">Collection</p>
-      <h3>Add this poem to an anthology</h3>
-      <p>Save this work alongside other poems, scenes, and literary excerpts you enjoy.</p>
-    </div>
-  </section>
+    <span class="progress-label">READ</span>
+  </div>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>William Shakespeare · Hamlet · Act III, Scene I</p>
-      <p class="muted">Designed as a clean literary reading experience.</p>
+    <div class="container footer-content">
+      <p>© 2026 The Verse. All rights reserved.</p>
+      <p class="muted">William Shakespeare · Hamlet · Act III, Scene I</p>
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
